@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MONUMENT - La police</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Amine BOULANOUAR">
+    <meta name="description" content="Police MONUMENT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./resources/js/main.js"></script>
+</head>
+<body onload="initMounumentPage();">
+    <main>
+		<section class="main-section main-section-expanded monument-section">
+            <a href="index.html" style="display: none;">
+                <img height="70px" src="https://befonts.com/wp-content/uploads/2018/09/monument-extended-font-family.jpg" title="Accueil" />
+            </a>
+            <h2 onclick="displayPage('monument.html')">Monument</h2>
+            <header class="menu">
+                <ul>
+                    <li><a href="./monument.html#1" onclick="updateSelectedMenuFromClick(1)">Intro</a></li>
+                    <li><a href="./monument.html#2" onclick="updateSelectedMenuFromClick(2)">Anatomie</a></li>
+                    <li><a href="./monument.html#3" onclick="updateSelectedMenuFromClick(3)">Testeurs</a></li>
+                    <li><a href="./monument.html#4" onclick="updateSelectedMenuFromClick(4)">Glyphes</a></li>
+                </ul>
+            </header>
+        </section>
+        <section class="main-section">
+            <div class="parts" id="content">
+
+                <!-- Pages 0 -->
+                <div id="0" class="part-vh black-surface">
+                    <div class="content" style="justify-content: center;">
+
+                        <div style="max-height: 100vh; margin-right: 20vw;">
+                            <img src="./resources/img/typeface.svg" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Pages 1 - Une police audacieuse -->
+                <div id="1"class="part-vh black-surface">
+                    <div class="content">
+
+                        <div class="page">
+                            <div class="page-col-left">
+                                <div class="page-col-left-title">
+                                    <span>Une police<br/>audacieuse</span>
+                                </div>
+                                <div class="page-col-left-img">
+                                    <img src="./resources/img/img11.svg">
+                                </div>
+                            </div>
+                            <div class="page-col-right">
+                                <div class="page-col-right-title-1">
+                                    <span>Une courte introduction</span>
+                                </div>
+                                <div class="page-col-right-title-2">
+                                    <span>8 styles différents, <br>avec 398 glyphes pour chaque</span>
+                                </div>
+                                <div class="page-col-right-body">
+                                    <span>La Monument Extended est une police de caractères étendue de qualité puissante avec une grande polyvalence.
+                                        Cette police étendue peut être utilisée pour des déclarations éditoriales audacieuses, des impressions graphiques lourdes ou tout simplement comme un simple logo.</span></div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Pages 2 - Courte mais puissante -->
+                <div  id="2"  class="part-vh black-surface">
+                    <div class="content">
+
+                        <div class="page">
+                            <div class="page-col-left">
+                                <div class="page-col-left-title">
+                                    <span>Courte, mais<br/>PUISSANTE</span>
+                                </div>
+                                <div class="page-col-left-img">
+                                    <img src="./resources/img/nd.svg">
+                                </div>
+                            </div>
+                            <div class="page-col-right">
+                                <div class="page-col-right-title-1">
+                                    <span>Morphologie et personnalité</span>
+                                </div>
+                                <div class="page-col-right-title-2">
+                                    <span class="number">01.</span>
+                                    <span>La hauteur de la police ressemble à notre conception métaphorique de la gravité.</span>
+                                </div>
+                                <div class="page-col-right-body">
+                                    <span>Les polices courtes véhiculent lourdeur et stabilité.
+                                        La Monument Extended a une personnalité assez imposante, elle est parfaite pour décrire la durabilité et l'immobilité, elle reste stable peu importe les circonstances.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Page - Anatomie et morphologie -->
+                <div class="part black-surface">
+                    <div class="content">
+
+                        <div class="page2">
+                            <div class="page2-row">
+                                <div class="page-col-left-title">
+                                    <span>La position de son <br/>centre d'inertie entraine<br/>rapidement son équilibre</span>
+                                </div>
+                            </div>
+                            <div class="page2-row" style="margin: -20px;">
+                                <img src="./resources/img/balance1.svg" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Page - Inertie -->
+                <div class="part-vh black-surface">
+                    <div class="content" style="justify-content: center;">
+
+                        <div style="max-height: 100vh; margin: 5vw;">
+                            <img src="./resources/img/inertie.png" style="max-width: 100%;" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Page - Anatomie basique -->
+                <div class="part-vh orange-surface">
+                    <div class="content">
+
+                        <div class="page2">
+                            <div class="page2-row">
+                                <div class="page-col-left-title">
+                                    <span>Anatomie<br/>basique</span>
+                                </div>
+                            </div>
+                            <div class="page2-row">
+                                <img src="./resources/img/type.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="part-vh orange-surface">
+                    <div class="content">
+
+                        <div class="page2">
+                            <div class="page2-row page2-row-cols">
+                                <div class="page-col-left">
+                                    <div class="page-col-left-img">
+                                        <img src="./resources/img/Aa.svg" />
+                                    </div>
+                                </div>
+                                <div class="page-col-right">
+                                    <div class="page-col-right-title-1" style="color: black">
+                                        <span>Majuscules et miniscules</span>
+                                    </div>
+                                    <div class="page-col-right-title-2">
+                                        <span class="number" style="color: white">02.</span>
+                                        <span>Une diffèrence d'un sixième près</span>
+                                    </div>
+                                    <div class="page-col-right-body">
+                                        <span>
+                                            On prenant la lettre "A" comme exemple, nous remarquons que la diffèrence entre le Cap Height et le X-Height est égale à un sixième de la taille du Cap Height.
+                                            Cette différence qui est très petite justifie bien la stabilité et le caractère imposant de la Monument Extended.
+                                        </span>
+                                        <span>Une diffèrence d'un sixième près</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="part-vh orange-surface">
+                    <div class="content">
+
+                        <div class="page2">
+                            <div class="page2-row" style="flex-direction: row; ">
+                                <div class="page-col-left">
+                                    <div class="page-col-left-img">
+                                        <img src="./resources/img/cq.svg" />
+                                    </div>
+                                </div>
+                                <div class="page-col-right">
+                                    <div class="page-col-right-title-1" style="color: black">
+                                        <span>Une approche géométrique</span>
+                                    </div>
+                                    <div class="page-col-right-title-2">
+                                        <span class="number" style="color: white">03.</span>
+                                        <span>Une conceptualisation basée sur une grille de 8 </span>
+                                    </div>
+                                    <div class="page-col-right-body">
+                                        <span>
+                                            La diffèrence entre la taille du X Height plus le descender et celle Du X Height est de deux septièmes. On peur bien voir ça en alignatn les deux lettre c et q. <br/><br/>
+                                            On peut en déduire que le concepteur est parti d'une base de en donnant une très grande proportion au X Height comparé aux autres attributs du caractère.
+                                        </span>
+                                        <span>Une diffèrence d'un sixième près</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Page - Anatomie détaillée -->
+                <div class="part white-surface">
+                    <div class="content">
+
+                        <div class="page2">
+                            <div class="page2-row">
+                                <div class="page-col-left-title">
+                                    <span>Anatomie<br/>détaillée</span>
+                                </div>
+                            </div>
+                            <div class="page2-row" style="margin-bottom: 180px;">
+                                <img src="./resources/img/AB.svg" />
+                            </div>
+                            <div class="page2-row" style="margin-bottom: 180px;">
+                                <img src="./resources/img/fgh.svg" />
+                            </div>
+                            <div class="page2-row" style="margin-bottom: 180px;">
+                                <img src="./resources/img/AM.svg" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Page - Formes proportionnelles -->
+                <div class="part-vh black-surface">
+                    <div class="content">
+
+                        <div class="page">
+                            <div class="page-col-left">
+                                <div class="page-col-left-title">
+                                    <span>Des formes<br />proportionelles</span>
+                                </div>
+                                <div class="page-col-left-img">
+                                    <img src="./resources/img/schema.svg">
+                                </div>
+                            </div>
+                            <div class="page-col-right">
+                                <div class="page-col-right-title-1">
+                                    <span>Anatomie et morphologie</span>
+                                </div>
+                                <div class="page-col-right-title-2">
+                                    <span class="number">04.</span>
+                                    <span>La monument Extended est une typographie assez symétrique et très proportionnelle</span>
+                                </div>
+                                <div class="page-col-right-body">
+                                    <span>
+                                        On remarque bien que tout au long de son processus créatif le concepteur a cherché à lier l’ensemble des éléments de chaque caractère.
+                                        <br/><br/>L’angle du vertex est à peu près le double de l’angle de l’artex avec une légère différence qui permet de rendre la typographie plus naturelle et plus lisible.
+                                        Dans la même logique, l’angle de l’arc du stem est à peu près le quadruple de celui du vertex.
+                                        <br/>On retrouve aussi une parfaite symétrie entre la distance qui se trouve entre le Cap Height et le l’artex et celle entre la baseline et le vertex (42px).
+
+                                        <br/>Le caractère imposant de cette typographie ainsi que sa base solide reviennent principalement aux sources d’inspirations du concepteur qui sont l’architecture et le mouvement brutaliste.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Pages 3 - Testeur 1 -->
+                <div id="3" class="part-vh black-surface">
+                    <div class="content">
+
+                        <div class="page2">
+
+                            <div class="page2-row page2-row-cols">
+                                <div class="page-col-left">
+                                    <div class="page-col-left-title">
+                                        <span>Typetester 1</span>
+                                    </div>
+                                </div>
+                                <div class="page-col-right">
+                                    <div class="page-col-right-title-1">
+                                        <span>Testeur et typographie</span>
+                                    </div>
+                                    <div class="page-col-right-title-2">
+                                        <span class="number">01.</span>
+                                        <span>Aperçu des 8 styles de la Monument Extended</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="page2-row" style="margin-bottom: 0px;">
+                                <div id="font-weight-value" style="font-size: 24px;">Regular</div>
+                                <div id="font-model" style="font-size:196px;">M</div>
+                            </div>
+
+                            <div class="page2-row" style="margin-bottom: 20px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <div style="font-weight: 100;" class="interaction-M" onclick="changeFontWeight(this, document.getElementById('font-model'), 100, document.getElementById('font-weight-value'))">
+                                        <div style="display: flex; flex-direction: column; align-items: center;"><div style='font-size: 32'>|</div><div>M</div></div>
+                                    </div>
+                                    <div style="font-weight: 200;" class="interaction-M" onclick="changeFontWeight(this, document.getElementById('font-model'), 200, document.getElementById('font-weight-value'))">
+                                        <div style="display: flex; flex-direction: column; align-items: center;"><div style='font-size: 32'>|</div><div>M</div></div>
+                                    </div>
+                                    <div style="font-weight: 300;" class="interaction-M" onclick="changeFontWeight(this, document.getElementById('font-model'), 300, document.getElementById('font-weight-value'))">
+                                        <div style="display: flex; flex-direction: column; align-items: center;"><div style='font-size: 32'>|</div><div>M</div></div>
+                                    </div>
+                                    <div style="font-weight: 400; color:#e95925" class="interaction-M" onclick="changeFontWeight(this, document.getElementById('font-model'), 400, document.getElementById('font-weight-value'))">
+                                        <div style="display: flex; flex-direction: column; align-items: center;"><div style='font-size: 32'>|</div><div>M</div></div>
+                                    </div>
+                                    <div style="font-weight: 500;" class="interaction-M" onclick="changeFontWeight(this, document.getElementById('font-model'), 500, document.getElementById('font-weight-value'))">
+                                        <div style="display: flex; flex-direction: column; align-items: center;"><div style='font-size: 32'>|</div><div>M</div></div>
+                                    </div>
+                                    <div style="font-weight: 700;" class="interaction-M" onclick="changeFontWeight(this, document.getElementById('font-model'), 700, document.getElementById('font-weight-value'))">
+                                        <div style="display: flex; flex-direction: column; align-items: center;"><div style='font-size: 32'>|</div><div>M</div></div>
+                                    </div>
+                                    <div style="font-weight: 800;" class="interaction-M" onclick="changeFontWeight(this, document.getElementById('font-model'), 800, document.getElementById('font-weight-value'))">
+                                        <div style="display: flex; flex-direction: column; align-items: center;"><div style='font-size: 32'>|</div><div>M</div></div>
+                                    </div>
+                                    <div style="font-weight: 900;" class="interaction-M" onclick="changeFontWeight(this, document.getElementById('font-model'), 900, document.getElementById('font-weight-value'))">
+                                        <div style="display: flex; flex-direction: column; align-items: center;"><div style='font-size: 32'>|</div><div>M</div></div>
+                                    </div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border: 1px solid;">
+                                    <div class="damier white-surface"></div>
+                                    <div class="damier black-surface"></div>
+                                    <div class="damier white-surface"></div>
+                                    <div class="damier black-surface"></div>
+                                    <div class="damier white-surface"></div>
+                                    <div class="damier black-surface"></div>
+                                    <div class="damier white-surface"></div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; border: 1px solid;">
+                                    <div class="damier black-surface"></div>
+                                    <div class="damier white-surface"></div>
+                                    <div class="damier black-surface"></div>
+                                    <div class="damier white-surface"></div>
+                                    <div class="damier black-surface"></div>
+                                    <div class="damier white-surface"></div>
+                                    <div class="damier black-surface"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page - Testeur 2 : Typetester -->
+                <div class="part-vh orange-surface">
+                    <div class="content">
+
+                        <div class="page2">
+
+                            <div class="page2-row page2-row-cols">
+                                <div class="page-col-left">
+                                    <div class="page-col-left-title">
+                                        <span>Typetester 2</span>
+                                    </div>
+                                </div>
+                                <div class="page-col-right">
+                                    <div class="page-col-right-title-1" style="color: white">
+                                        <span>Testeur et typographie</span>
+                                    </div>
+                                    <div class="page-col-right-title-2">
+                                        <span class="number" style="color: white">02.</span>
+                                        <span>Tous le potentiel de la Monument Extended</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="page2-row">
+                                <textarea id="interaction-T" class="black-surface interaction-T" placeholder="Votre texte ici"></textarea>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                                <div class="interaction-control" style="width: 170px">
+                                    <label for="interaction-weights">Gras</label>
+                                    <select id="interaction-weights" name="font-weights" class="font-police"
+                                        onchange="changeFontWeightOnly(document.getElementById('interaction-T'), this.value)">
+                                        <option value="100">Thin</option>
+                                        <option value="200">Light</option>
+                                        <option value="300">Book</option>
+                                        <option value="400" selected>Regular</option>
+                                        <option value="500">Medium</option>
+                                        <option value="700">Bold</option>
+                                        <option value="800">Black</option>
+                                        <option value="900">Heavy</option>
+                                    </select>
+                                </div>
+
+                                <div style="width: 130px; display: flex; flex-direction: row; justify-content: space-around;" class="interaction-control">
+                                    <div id="interaction-I" class="size-button black-surface" style="font-style: italic" title="Italic"
+                                        onclick="changeFontStyle(document.getElementById('interaction-T'), 'italic')">I</div>
+                                    <div id="interaction-U" class="size-button black-surface" style="text-decoration: underline;" title="Souligné"
+                                        onclick="changeTextDecoration(document.getElementById('interaction-T'), 'underline')">U</div>
+                                </div>
+
+                                <div class="interaction-control" style="flex-grow: 1;">
+                                    <label for="interaction-size-slider">Size</label>
+                                    <div style="display: flex;">
+                                        <input id="interaction-size-slider" type="range" min="10" max="240" value="64" style="flex-grow: 1;"
+                                            onchange="changeFontSize(this, document.getElementById('interaction-T'), this.value, document.getElementById('interaction-size'))" >
+                                        <input id="interaction-size" class="size-output" value="64" size="3" min="10" max="128"
+                                            onchange="changeFontSize(this,document.getElementById('interaction-T'), this.value, document.getElementById('interaction-size-slider'))">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pages 4 - Glyphes -->
+                <div id="4" class="part black-surface">
+                    <div class="content">
+
+                        <div class="page2">
+                            <div class="page2-row">
+                                <div class="page-col-left-title">
+                                    <span>Glyphes</span>
+                                </div>
+                            </div>
+                            <div class="page2-row">
+                                <div id="glyph-1"></div>
+                                <div id="glyph-2"></div>
+                                <div id="glyph-3"></div>
+                                <div id="glyph-4"></div>
+                                <div id="glyph-5"></div>
+                                <div id="glyph-6"></div>
+                                <div id="glyph-7"></div>
+                                <div id="glyph-8"></div>
+                                <div id="glyph-9"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section flex class="main-section main-section-collapsed history-section" onclick="displayPage('history.html')">
+            <h2>Histoire</h2>
+		</section>
+	</main>
+</body>
+</html>

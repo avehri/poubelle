@@ -1,0 +1,133 @@
+@media screen and (max-width: 1024px) {
+
+    .page {
+        flex-direction: column;
+        padding-top: calc(5vw);
+    }
+
+    .page-col-left {
+        margin-bottom: 40px;
+    }
+    .page-col-left-title {
+        font-size: 36px;
+    }
+    .page-col-right-title-1 {
+        font-size: 12px;
+    }
+
+    .page-col-right {
+        margin-bottom: 40px;
+    }
+
+    .page-col-right-title-2 {
+        font-size: 18px;
+        margin-left: 70px;
+    }
+
+    .page2 {
+        padding-top: calc(5vw);
+    }
+    .page2-row-cols {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    /* Menu */
+    .menu {
+        align-self: stretch;
+        justify-content: center;
+        margin: -20px;
+    }
+    .menu ul {
+        flex-direction: row;
+        align-content: center;
+    }
+    .menu ul li {
+        margin-right: 40px;
+    }
+
+    /* main-section-expanded */
+    .main-section-expanded {
+        display: flex;
+        align-content : stretch;
+    }
+    .main-section-expanded h2 {
+        margin: 20px;
+        padding: 0px;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+
+    /* main-section-collapsed */
+    .main-section-collapsed {
+        display: flex;
+        align-content  : stretch;
+    }
+    .main-section-collapsed h2 {
+        padding-bottom: 0px;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+
+    .monument-section .menu {
+        border-top: 1px solid var(--color-white);
+        border-bottom: 1px solid var(--color-white);
+    }
+    .history-section .menu {
+        border-top: 1px solid var(--color-black);
+        border-bottom: 1px solid var(--color-black);
+    }
+
+    .main-section-expanded.history-section {
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+    .main-section-expanded.history-section > * {
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+
+    .parts {
+        height: calc(100vh - 212px);
+    }
+    .content {
+        min-height: calc(100vh - 212px - 40px);
+    }
+    .part-vh {
+        min-height: calc(100vh - 212px);
+    }
+
+    .intro-img {
+        height: 90%;
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    .balance-img {
+        height: 240px;
+    }
+
+    .title-50 {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .page-col-left-title {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .page-col-right-title-1 {
+        font-size: 12px;
+    }
+    .page-col-right-title-2 {
+        font-size: 16px;
+    }
+}
+

@@ -1,0 +1,409 @@
+/*
+https://www.webtype.com/info/articles/fonts-weights/
+100    Extra Light or Ultra Light
+200    Light or Thin
+300    Book or Demi
+400    Normal or Regular
+500    Medium
+600    Semibold, Demibold
+700    Bold
+800    Black, Extra Bold or Heavy
+900    Extra Black, Fat, Poster or Ultra Black
+*/
+
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../font/MonumentExtended-Thin.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../font/MonumentExtended-Light.ttf') format('truetype');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../font/MonumentExtended-Book.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../font/MonumentExtended-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../font/MonumentExtended-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../font/MonumentExtended-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../font/MonumentExtended-Black.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'MonumentExtended';
+    src: url('../font/MonumentExtended-Heavy.ttf') format('truetype');
+    font-weight: 900;
+}
+
+:root {
+    --color-black : black;
+    --color-grey : grey;
+    --color-lightgrey : #E4E4E7;
+    --color-white :  ghostwhite;
+    --color-green : #83e83c;
+    --color-orange : #e95925;
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.green-surface {
+    background-color: var(--color-green);
+    color:  var(--color-black);
+}
+.orange-surface {
+    background-color: var(--color-orange);
+    color:  var(--color-white);
+}
+.black-surface {
+    background-color: var(--color-black);
+    color:  var(--color-white);
+}
+.white-surface {
+    background-color: var(--color-white);
+    color:  var(--color-black);
+}
+
+.lightgrey-surface {
+    background-color: var(--color-lightgrey);
+    color:  var(--color-black);
+}
+
+body {
+    font-family: "MonumentExtended";
+    margin: 0;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.main-section {
+    flex: 1 0 50%;
+    align-items: center;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-section h2 {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.main-section-collapsed {
+    justify-content: space-between;
+    flex: 0 0 50px;
+    padding: 10px;
+    font-size: 14px;
+}
+.main-section-collapsed h2 {
+    flex-grow: 1;
+    text-align: end;
+    /* padding-bottom: calc(40px + 75px + 10px); /* 75px a + img height 10 parent padding*/
+    padding-bottom: 40px;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+}
+
+.main-section-expanded {
+    justify-content: space-between;
+    flex: 0 0 50px;
+    padding: 20px;
+}
+.main-section-expanded h2 {
+    flex-grow: 1;
+    text-align: end;
+    padding-bottom: 40px;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+}
+
+.monument-section {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border : solid 0.5px grey;
+}
+.monument-section a {
+    font-size: 12px;
+    color: var(--color-grey);
+}
+.monument-section a:hover, a:active {
+    color: var(--color-white);
+}
+
+.history-section {
+    color: var(--color-black);
+    background-color: var(--color-lightgrey);
+    border: solid 0.5px black;
+}
+.history-section a {
+    font-size: 12px;
+    color: var(--color-grey);
+}
+.history-section a:hover, a:active {
+    color: var(--color-black);
+}
+
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px;
+}
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 0px;
+}
+.menu ul li {
+    list-style-type: none;
+}
+.menu ul li a {
+    text-decoration: none;
+}
+
+.monument-section .menu ul li.selected a {
+    color: var(--color-white);
+    font-weight: bolder;
+}
+
+.history-section .menu ul li.selected a {
+    color: var(--color-black);
+    font-weight: bolder;
+}
+
+.parts  {
+    background-color: lemonchiffon;
+
+    height: calc(100vh);
+    overflow-y: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.parts::-webkit-scrollbar {
+    display: none;
+}
+
+.part-vh {
+    min-height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+}
+
+.part {
+}
+
+.content {
+    min-height: calc(100vh - 40px); /* - margin top and bottom */
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    padding: 20px;
+}
+
+.moscow-img {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/moscow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: center;
+}
+
+.interaction-M {
+    cursor: pointer;
+}
+.damier {
+    height: 30px;
+    width: calc(100% / 7);
+}
+
+textarea.interaction-T {
+    outline: none;
+    resize: none;
+    font-size: 64px;
+    width: 100%;
+    height: 300px;
+    border: 3px solid white;
+    font-family: 'MonumentExtended';
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+textarea.interaction-T::placeholder {
+    color: var(--color-white);
+    font-size: 24px;
+}
+
+.interaction-control {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+select.font-police {
+    outline: none;
+    height: 52px;
+    border: 1px solid;
+    font-size: 22px;
+    margin-right: 10px;
+    font-family: 'MonumentExtended';
+}
+
+div.size-button {
+    border: 1px solid;
+    padding: 10px 20px 20px 15px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+input.size-slider {
+    outline: none;
+}
+
+input.size-output {
+    outline: none;
+    border: 1px solid;
+    padding: 15px 5px 15px 5px;
+    height: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-family: 'MonumentExtended';
+    vertical-align: middle;
+}
+
+.glyph-table {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.glyph-title {
+    font-size: 24px;
+    margin: 20px 0px 15px 0px;
+    text-align: left;
+}
+.glyph-chars {
+    display: flex;
+    flex-wrap: wrap;
+}
+.glyph-char {
+    border: 1px solid var(--color-white);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.glyph-char:hover {
+    color: var(--color-black);
+    background-color: var(--color-orange);
+    transform: scale(1.5);
+}
+
+.page {
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    padding-top: calc(10vw);
+}
+.page-col-left {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.page-col-left-title {
+    font-size: 36px;
+    line-height: 1.6;;
+    font-weight: 700;
+}
+.page-col-left-img {
+    flex: 1 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.page-col-left-img img {
+    width: 75%;
+    margin: 20px 20px 20px 0px;
+}
+.page-col-right {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.page-col-right-title-1 {
+    font-size: 12px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    width: 70%;
+}
+.page-col-right-title-2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    display: flex;
+    width: 70%;
+}
+.page-col-right-title-2 .number {
+    color : grey;
+    margin-left: -70px;
+    padding-right: 20px;
+    font-weight: 200;
+}
+.page-col-right-body {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    width: 70%;
+}
+
+.page2 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: calc(10vw);
+}
+.page2-row {
+    flex-basis: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page2-row-cols {
+    flex-direction: row;
+}
